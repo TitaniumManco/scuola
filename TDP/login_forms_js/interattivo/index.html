@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Login</title>
+
+    <style>
+    
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(224, 196, 255);
+            margin-top: 3%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+    
+        .buttons {
+            width: 98%;
+            height: 70px;
+            background-color: rgb(46, 46, 46);
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        .buttoncontainer {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            gap: 20px;
+            background-color: white;
+            width: 25%;
+            padding: 40px;
+            border-radius: 5%;
+            
+        }
+    
+        .testo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .inputs {
+            height: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .correct {
+            color: green;
+        }
+    
+    </style>
+</head>
+
+
+
+<body>
+    <form class="container">
+
+        <h1>Form di Login</h1>
+
+        <div class="testo">Nominativo:</div>
+        <input type="text" class="inputs" id="usernameInput" required>
+        <div id="erroreNome" class="error"></div>
+
+
+        <div class="testo">Età:</div>
+        <input type="text" class="inputs" id="ageInput" required>
+        <div id="errorEta" class="error"></div>
+
+
+        <div class="testo">Password:</div>
+        <input type="password" class="inputs" id="passwordInput" required>
+        <div id="errorPassword" class="error"></div>
+
+
+        <div class="testo">Flag di consenso:</div>
+
+        <div>
+            <input type="radio" id="affirmative" name="consenso" value="Yes" required>
+            <label for="affirmative"> Acconsento</label><br>
+
+            <input type="radio" id="negative" name="consenso" value="No">
+            <label for="negative"> Non acconsento</label>
+        </div>
+
+        <div id="errorConsenso" class="error"></div>
+
+
+        <div class="buttoncontainer">
+            <button class="buttons" type="button" onclick="checkForm()">Conferma</button>
+        </div>
+
+        <div id="errori"></div>
+
+        <script src="./app.js"></script>
+    </form>
+
+
+</body>
+
+
+</html>
