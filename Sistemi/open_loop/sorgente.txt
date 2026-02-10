@@ -1,0 +1,14 @@
+Questo è un file di prova.
+Serve per testare il programma di copia sicura.
+Ogni riga è numerata per facilitare il controllo:
+1. Prima riga
+2. Seconda riga
+3. Terza riga
+4. Quarta riga
+5. Quinta riga
+6. Sesta riga
+7. Settima riga
+8. Ottava riga
+9. Nona riga
+10. Decima riga
+Fine del file.
