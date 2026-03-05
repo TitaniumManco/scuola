@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Richiesta</title>
+
+    <style>
+    
+        body {
+            background-color: rgb(233, 213, 255);
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+    
+        .container {
+            background-color: white;
+            width: 700px;
+            padding: 40px;
+            border-radius: 30px;
+            
+        }
+    
+        .testo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .buttons {
+            width: 98%;
+            height: 70px;
+            background-color: rgb(46, 46, 46);
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            margin-top: 50px;
+        }
+        
+        .inputs {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 2px solid black;
+            font-size: 18px;
+            margin-bottom: 75px;
+        }
+
+        .inputs2 {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 2px solid black;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <form class="container">
+
+        <h1>Modulo di Contatto</h1>
+
+        <div class="testo">--- Credenziali ---</div>
+        <br>
+        <div class="testo">Nome utente:</div>
+        <input type="text" class="inputs2" id="usernameInput">
+        <div class="testo">Password:</div>
+        <input type="password" class="inputs" id="passwordInput">
+
+
+        <div class="testo">--- Contatti ---</div>
+        <br>
+        <div class="testo">Numero di Telefono:</div>
+        <input type="text" class="inputs2" id="telefonoInput">
+        <div class="testo">Sito web dell’organizzazione:</div>
+        <input type="text" class="inputs" id="urlInput">
+
+
+        <div class="testo">--- Dettagli Organizzazione ---</div>
+        <br>
+        <div class="testo">Nome dell'ente:</div>
+        <input type="text" class="inputs" id="enteInput">
+
+
+        <div class="testo">--- Ambito di Consulenza ---</div>
+        <input type="checkbox" id="Linux">
+        <label for="Linux">Linux</label><br>
+        <input type="checkbox" id="Windows">
+        <label for="Windows">Windows</label><br>
+        <input type="checkbox" id="Android">
+        <label for="Android">Android</label><br>
+        <input type="checkbox" id="Database">
+        <label for="Database">Database</label><br>
+        <br><br><br>
+
+        <div class="testo">--- Tempistiche ---</div>
+        <br>
+        <div class="testo">Data d'invio della richiesta:</div>
+        <input type="text" class="inputs2" id="dateInput">
+
+        
+        <button class="buttons" type="button" id="Submit" onclick="checkForm()"> Submit </button>
+        
+        <div id="risultato"></div>
+        
+        <script src="./app.js"></script>
+    </form>
+
+
+</body>
+
+
+</html>
