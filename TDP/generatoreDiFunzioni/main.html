@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizzatore di Funzioni Matematiche</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            background-color: rgb(224, 196, 255);
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .container {
+            background-color: white;
+            width: 600px;
+            padding: 40px;
+            border-radius: 30px;
+        }
+
+        .testo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .inputs {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 2px solid black;
+            font-size: 18px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .buttons {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(46, 46, 46);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .buttons:hover {
+            background-color: rgb(80, 80, 80);
+        }
+
+        #chart_div {
+            width: 100%;
+            height: 400px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizzatore di Funzioni</h1>
+
+        <div id="getting-params">
+            <h3>Funzione</h3>
+
+            <div class="testo">Tipo di funzione:</div>
+            <select id="funzione" class="inputs" onchange="aggiornaCampi()">
+                <option value="retta">Retta, y = ax + b</option>
+                <option value="parabola">Parabola, y = ax² + bx + c</option>
+            </select>
+
+            <h3>Parametri</h3>
+
+            <div class="testo" id="label-a">Parametro a:</div>
+            <input type="number" id="af" class="inputs">
+
+            <div class="testo" id="label-b">Parametro b:</div>
+            <input type="number" id="bf" class="inputs">
+
+            <div id="campo-c">
+                <div class="testo">Parametro c:</div>
+                <input type="number" id="cf" class="inputs">
+            </div>
+        </div>
+
+        <div id="range">
+            <h3>Range</h3>
+
+            <div class="testo">X massimo:</div>
+            <input type="number" id="max" class="inputs">
+
+            <div class="testo">X minimo:</div>
+            <input type="number" id="min" class="inputs">
+
+            <div class="testo">Step:</div>
+            <input type="number" id="n" class="inputs">
+        </div>
+
+        <button class="buttons" type="button" onclick="creaGrafico()">Genera Grafico</button>
+
+        <div id="divGrafico"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
